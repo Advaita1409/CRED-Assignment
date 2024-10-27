@@ -5,35 +5,35 @@ import { fetchStackData } from '../services/StackService';
 import StackItemView from './StackItemView';
 
 const StackContainer: React.FC = () => {
-  const [items, setItems] = useState<StackItem[]>([]);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+const [items, setItems] = useState<StackItem[]>([]);
+const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  useEffect(() => {
+useEffect(() => {
     const loadData = async () => {
-      const data = await fetchStackData();
-      setItems(data);
+    const data = await fetchStackData();
+    setItems(data);
     };
     loadData();
-  }, []);
+}, []);
 
-  const toggleItem = (index: number) => {
+const toggleItem = (index: number) => {
     // If the clicked item is already expanded, collapse it
     // Otherwise, expand the clicked item and collapse others
     setActiveIndex(activeIndex === index ? null : index);
-  };
+};
 
-  return (
+return (
     <div>
-      {items.map((item, index) => (
+    {items.map((item, index) => (
         <StackItemView
-          key={item.id}
-          item={item}
-          isExpanded={activeIndex === index}
-          onToggle={() => toggleItem(index)}
+        key={item.id}
+        item={item}
+        isExpanded={activeIndex === index}
+        onToggle={() => toggleItem(index)}
         />
-      ))}
+    ))}
     </div>
-  );
+);
 };
 
 export default StackContainer;

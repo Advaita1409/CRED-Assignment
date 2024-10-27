@@ -1,0 +1,10 @@
+/* src/styles/styles.css */
+.expanded {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.collapsed {
+    background-color: #fff;
+    padding: 10px;
+}
