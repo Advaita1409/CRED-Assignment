@@ -4,4 +4,4 @@ export interface StackItem {
     title: string;
     description: string;
     isExpanded: boolean;
-  }
+}
