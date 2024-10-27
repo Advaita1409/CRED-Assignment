@@ -1,12 +1,11 @@
-// src/components/StackContainer.tsx
+// src/components/StackContainer.js
 import React, { useEffect, useState } from 'react';
-import { StackItem } from '../models/StackItem';
 import { fetchStackData } from '../services/StackService';
 import StackItemView from './StackItemView';
 
-const StackContainer: React.FC = () => {
-const [items, setItems] = useState<StackItem[]>([]);
-const [activeIndex, setActiveIndex] = useState<number | null>(null);
+const StackContainer = () => {
+const [items, setItems] = useState([]);
+const [activeIndex, setActiveIndex] = useState(null);
 
 useEffect(() => {
     const loadData = async () => {
@@ -16,7 +15,7 @@ useEffect(() => {
     loadData();
 }, []);
 
-const toggleItem = (index: number) => {
+const toggleItem = (index) => {
     // If the clicked item is already expanded, collapse it
     // Otherwise, expand the clicked item and collapse others
     setActiveIndex(activeIndex === index ? null : index);
