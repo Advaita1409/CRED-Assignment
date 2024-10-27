@@ -1,15 +1,15 @@
 // src/App.js
 import React from 'react';
-import StackContainer from './components/StackContainer';
-import './styles/styles.css'; // Import your styles if you created a CSS file
+import StackView from './components/StackView/StackView';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1>Stack View Example</h1>
-      <StackContainer />
+    <div className="App">
+      <h1>Stack View Demo</h1>
+      <StackView />
     </div>
   );
-};
+}
 
 export default App;

@@ -1,0 +1,14 @@
+.stack-view {
+    max-width: 600px; /* Set a maximum width for the stack view */
+    margin: 0 auto; /* Center the stack view */
+    padding: 20px; /* Add padding around the stack view */
+    background-color: #f5f5f5; /* Light background color */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+    color: #333; /* Darker color for the header */
+    margin-bottom: 30px; /* Spacing below the header */
+    font-size: 24px; /* Adjust font size for the title */
+}
